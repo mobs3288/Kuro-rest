@@ -1,4 +1,4 @@
-# Kuro - MyFigureCollection REST API
+# Kuro - Unofficial MyFigureCollection REST API
 
 Kuro is a REST API built using Flask that interacts with data from [MyFigureCollection](https://myfigurecollection.net/). This API allows users to retrieve information about figures, entries, and collections available on the MyFigureCollection website. It leverages web scraping techniques through open-source libraries to gather data dynamically from the MyFigureCollection website, ensuring that users have access to the latest information.
 
