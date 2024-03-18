@@ -1,5 +1,5 @@
-from my_package.figure_collection_api import MyFigureCollectionRestAPI
+from my_package.MyFigureCollectionRestAPI import KuroRest
 
 if __name__ == "__main__":
-    api = MyFigureCollectionRestAPI()
+    api = KuroRest()
     api.run()
