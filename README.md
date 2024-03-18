@@ -42,7 +42,7 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 - Make HTTP GET requests to the respective endpoints with appropriate parameters to fetch the desired information.
 
 ## Disclaimer:
-This project is intended for demonstration purposes and facilitating access to data from MyFigureCollection. Please ensure compliance with MyFigureCollection's terms of service and policies when using this API. Use responsibly and ethically.
+This project is intended for facilitating access to data from MyFigureCollection. Please ensure compliance with MyFigureCollection's terms of service and policies when using this API. Use responsibly and ethically.
 
 ## License:
 This project is licensed under the [MIT License](LICENSE).
