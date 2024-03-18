@@ -20,22 +20,26 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 
 ## Installation:
 1. Clone the repository:
-   ```bash git clone https://github.com/your-username/Kuro.git
+   ```
+   bash git clone https://github.com/your-username/Kuro.git
 
 2. Navigate to the project directory:
-   ```cd Kuro
+   ```
+   cd Kuro
    
 3. Install dependencies:
-   ```pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
 
 4. Run the application:
-   ```python main.py
+   ```
+   python main.py
 
 4. The API will be available at http://127.0.0.1:9192/
 
 ## Usage:
-- `Use the provided endpoints to retrieve data about figures, entries, and collections from MyFigureCollection.
-- `Make HTTP GET requests to the respective endpoints with appropriate parameters to fetch the desired information.
+- Use the provided endpoints to retrieve data about figures, entries, and collections from MyFigureCollection.
+- Make HTTP GET requests to the respective endpoints with appropriate parameters to fetch the desired information.
 
 ## Disclaimer:
 This project is intended for demonstration purposes and facilitating access to data from MyFigureCollection. Please ensure compliance with MyFigureCollection's terms of service and policies when using this API. Use responsibly and ethically.
