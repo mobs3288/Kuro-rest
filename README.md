@@ -41,6 +41,21 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 - Use the provided endpoints to retrieve data about figures, entries, and collections from MyFigureCollection.
 - Make HTTP GET requests to the respective endpoints with appropriate parameters to fetch the desired information.
 
+## Contribution
+
+Contributions to Kuro are welcomed and encouraged! If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/contribution`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/contribution`).
+6. Create a new Pull Request.
+
+Please ensure that your contributions adhere to the project's coding standards and follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+If you have any questions or need assistance, feel free to open an issue or reach out to the project maintainers.
+
 ## Disclaimer:
 This project is intended for facilitating access to data from MyFigureCollection. Please ensure compliance with MyFigureCollection's terms of service and policies when using this API. Use responsibly and ethically.
 
