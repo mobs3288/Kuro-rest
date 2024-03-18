@@ -1,11 +1,11 @@
 from flask import Flask, Response
 import json
-from figure_data import get_fig_data
-from entry_data import get_entry_data, get_entry_max_page_number
-from owned_collection_data import get_owned_figure_by_uname, get_owned_collection_max_page
-from ordered_collection_data import get_ordered_figure_by_uname, get_ordered_collection_max_page
-from wished_collection_data import get_wished_figure_by_uname, get_wished_collection_max_page
-from latest_figure_data import get_latest_figure, get_latest_max_page
+from my_package.figure_data import get_fig_data
+from my_package.entry_data import get_entry_data, get_entry_max_page_number
+from my_package.owned_collection_data import get_owned_figure_by_uname, get_owned_collection_max_page
+from my_package.ordered_collection_data import get_ordered_figure_by_uname, get_ordered_collection_max_page
+from my_package.wished_collection_data import get_wished_figure_by_uname, get_wished_collection_max_page
+from my_package.latest_figure_data import get_latest_figure, get_latest_max_page
 
 class MyFigureCollectionRestAPI:
     def __init__(self):
