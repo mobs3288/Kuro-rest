@@ -11,20 +11,20 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 - **Latest Figures:** Get information about the latest figures added to the collection with pagination.
 
 ## Endpoints:
-- `/items/<item_id>`: Retrieve data for a specific figure.
-- `/entry/<entry_id>/<page_number>`: Retrieve entries for a given entry ID with pagination.
-- `/profile/<username>/collection/owned/<page_number>`: Retrieve owned figure collection for a user with pagination.
-- `/profile/<username>/collection/ordered/<page_number>`: Retrieve ordered figure collection for a user with pagination.
-- `/profile/<username>/collection/wished/<page_number>`: Retrieve wished figure collection for a user with pagination.
-- `/latest/<page_number>`: Retrieve the latest figures with pagination.
-- `/items/onfire`: Retrieve figures that are currently trending.
-- `/items/most_wished`: Retrieve figures that are most wished by users.
-- `/items/most_ordered`: Retrieve figures that are most ordered by users.
-- `/items/most_owned`: Retrieve figures that are most owned by users.
-- `/items/most_rated`: Retrieve figures that are most highly rated by users.
-- `/items/most_viewed`: Retrieve figures that are most viewed by users.
-- `/items/releases/<year>/<month>/<day>`: Retrieve figures released on a specific date.
-- `/profile/<username>`: Retrieve profile information for a user.
+- `/v1/items/<item_id>`: Retrieve data for a specific figure.
+- `/v1/entry/<entry_id>/<page_number>`: Retrieve entries for a given entry ID with pagination.
+- `/v1/profile/<username>/collection/owned/<page_number>`: Retrieve owned figure collection for a user with pagination.
+- `/v1/profile/<username>/collection/ordered/<page_number>`: Retrieve ordered figure collection for a user with pagination.
+- `/v1/profile/<username>/collection/wished/<page_number>`: Retrieve wished figure collection for a user with pagination.
+- `/v1/latest/<page_number>`: Retrieve the latest figures with pagination.
+- `/v1/items/onfire`: Retrieve figures that are currently trending.
+- `/v1/items/most_wished`: Retrieve figures that are most wished by users.
+- `/v1/items/most_ordered`: Retrieve figures that are most ordered by users.
+- `/v1/items/most_owned`: Retrieve figures that are most owned by users.
+- `/v1/items/most_rated`: Retrieve figures that are most highly rated by users.
+- `/v1/items/most_viewed`: Retrieve figures that are most viewed by users.
+- `/v1/items/releases/<year>/<month>/<day>`: Retrieve figures released on a specific date.
+- `/v1/profile/<username>`: Retrieve profile information for a user.
 
 ## Installation:
 1. Clone the repository:
