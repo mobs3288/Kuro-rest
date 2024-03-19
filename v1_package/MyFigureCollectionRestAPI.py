@@ -1,20 +1,20 @@
 from flask import Flask, Response
 import json
 from functools import lru_cache
-from v1_my_package.figure_data import get_fig_data
-from v1_my_package.entry_data import get_entry_data, get_entry_max_page_number
-from v1_my_package.owned_collection_data import get_owned_figure_by_uname, get_owned_collection_max_page
-from v1_my_package.ordered_collection_data import get_ordered_figure_by_uname, get_ordered_collection_max_page
-from v1_my_package.wished_collection_data import get_wished_figure_by_uname, get_wished_collection_max_page
-from v1_my_package.latest_figure_data import get_latest_figure, get_latest_max_page
-from v1_my_package.onfire_data import get_onfire_figure
-from v1_my_package.most_wished_data import get_most_wished_figure
-from v1_my_package.most_ordered_data import get_most_ordered_figure
-from v1_my_package.most_owned_data import get_most_owned_figure
-from v1_my_package.most_rated_data import get_most_rated_figure
-from v1_my_package.most_viewed_data import get_most_viewed_figure
-from v1_my_package.releases_data import get_releases_date_figure, get_releases_date_max_page_number
-from v1_my_package.profile import get_profile_data
+from v1_package.figure_data import get_fig_data
+from v1_package.entry_data import get_entry_data, get_entry_max_page_number
+from v1_package.owned_collection_data import get_owned_figure_by_uname, get_owned_collection_max_page
+from v1_package.ordered_collection_data import get_ordered_figure_by_uname, get_ordered_collection_max_page
+from v1_package.wished_collection_data import get_wished_figure_by_uname, get_wished_collection_max_page
+from v1_package.latest_figure_data import get_latest_figure, get_latest_max_page
+from v1_package.onfire_data import get_onfire_figure
+from v1_package.most_wished_data import get_most_wished_figure
+from v1_package.most_ordered_data import get_most_ordered_figure
+from v1_package.most_owned_data import get_most_owned_figure
+from v1_package.most_rated_data import get_most_rated_figure
+from v1_package.most_viewed_data import get_most_viewed_figure
+from v1_package.releases_data import get_releases_date_figure, get_releases_date_max_page_number
+from v1_package.profile import get_profile_data
 
 class KuroRest:
     def __init__(self):
