@@ -64,13 +64,15 @@ def get_fig_data(item_id):
                 
                 prices = releases_and_prices[1].strip()
                 # Extract price using regular expression
-                price_match = re.search(r'(\d[\d,]*) JPY', prices)
+                price_match = re.search(r'([\d,]+(?:\.\d+)?)\s*(\w+)', prices)
                 if price_match:
                     price = price_match.group(1)
+                    currency = price_match.group(2)
                 else:
                     price = None
+                    currency = None
                 
-                data_dict[label] = {"Releases": release_date, "Price": price}
+                data_dict[label] = {"Releases": release_date, "Price": price + " " + currency}
             else:
                 data_dict[label] = value
         data_info_list.append(data_dict)

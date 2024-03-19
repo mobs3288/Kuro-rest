@@ -17,6 +17,14 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 - `/profile/<username>/collection/ordered/<page_number>`: Retrieve ordered figure collection for a user with pagination.
 - `/profile/<username>/collection/wished/<page_number>`: Retrieve wished figure collection for a user with pagination.
 - `/latest/<page_number>`: Retrieve the latest figures with pagination.
+- `/items/onfire`: Retrieve figures that are currently trending.
+- `/items/most_wished`: Retrieve figures that are most wished by users.
+- `/items/most_ordered`: Retrieve figures that are most ordered by users.
+- `/items/most_owned`: Retrieve figures that are most owned by users.
+- `/items/most_rated`: Retrieve figures that are most highly rated by users.
+- `/items/most_viewed`: Retrieve figures that are most viewed by users.
+- `/items/releases/<year>/<month>/<day>`: Retrieve figures released on a specific date.
+- `/profile/<username>`: Retrieve profile information for a user.
 
 ## Installation:
 1. Clone the repository:
