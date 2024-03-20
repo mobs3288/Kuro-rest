@@ -1,5 +1,6 @@
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 import json
+import os
 from functools import lru_cache
 from v1_package.figure_data import get_fig_data
 from v1_package.entry_data import get_entry_data, get_entry_max_page_number
@@ -18,7 +19,10 @@ from v1_package.profile import get_profile_data
 
 class KuroRest:
     def __init__(self):
-        self.app = Flask(__name__)
+        template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+        static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
+        self.app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+        self.app.add_url_rule('/', 'main', self.main)
         self.app.add_url_rule('/v1/items/<item_id>', 'get_item_data', self.get_item_data)
         self.app.add_url_rule('/v1/entry/<entry_id>/<page_number>', 'get_entry', self.get_entry)
         self.app.add_url_rule('/v1/profile/<username>/collection/owned/<page_number>', 'get_owned_collection_by_uname', self.get_owned_collection_by_uname)
@@ -36,6 +40,9 @@ class KuroRest:
     
     def run(self, debug=True, port=9192):
         self.app.run(debug=debug, port=port)
+
+    def main(self):
+        return render_template('index.html')
     
     @staticmethod
     @lru_cache(maxsize=128)

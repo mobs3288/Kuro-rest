@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kuro</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include DaisyUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.10.3/dist/full.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/WebLogo.png')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/kuro.css') }}">
+</head>
+<body class="bg-gray-100">
+    <!-- Left Sidebar -->
+    <div class="sidebar sidebar-left bg-white p-4 ">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex items-center">
+                <img src="{{url_for('static', filename='images/1706361952913.jpg')}}" alt="Profile Picture" class="w-32 h-32 rounded-full">
+                <div class="ml-6">
+                    <h2 class="text-lg font-semibold text-gray-800">Ryan Oktaviandi Susilo Wibowo</h2>
+                    <p class="text-gray-600">Fresh Graduate Informatics student at Telkom University</p>
+                    <div class="border-t border-gray-400 w-full"></div>
+                    <span class="text-gray-500"><span id="emailLink" style="cursor: pointer;">ryanoktaviandi1010@gmail.com</span> | +6282126162177 | Bandung, Indonesia</span> 
+                </div>
+            </div>
+        </div>        
+        <div class="w-full h-1 rounded-lg shadow-lg my-2 overflow-hidden">
+            <div class="w-full h-full rounded-lg animate-gradient-yellow-to-orange"></div>
+        </div>
+        <ul class="bg-white shadow-md rounded-lg p-6 text-justify mb-2">
+            <!-- Profile Details -->
+            <li class="mb-2">
+                <h3 class="text-lg font-semibold">About</h3>
+                <p class="text-gray-700 text-justify">Recent graduate with Cum Laude distinction from Telkom University, Indonesia, specializing in Informatics, renowned for a steadfast
+                    commitment to logical problem-solving and realism. Proficient in exploring advanced testing methodologies, notably Model-Based
+                    Testing (MBT). Demonstrated expertise in software engineering, backend development, and quality assurance. Skilled in a diverse array
+                    of programming languages including Python, C++, Java, MySQL, PHP, HTML + CSS, and Go, complemented by proficiency in
+                    pseudocode. Possesses an understanding of Data Analysis and Machine Learning. Recognized as a fast learner. Interested in pursuing
+                    roles in Quality Assurance, Backend Engineering, and Software Development. Eager to connect with fellow professionals in the tech
+                    community to exchange insights, foster learning, and collaboratively drive groundbreaking projects forward</p>
+            </li>
+            <!-- Education Section -->
+            <li class="mb-2">
+                <h3 class="text-lg font-semibold">Education</h3>
+                <p class="text-gray-700">Telkom University</p>
+                <p class="text-sm text-gray-700">Bachelor of Technology - BTech, Informatics</p>
+                <p class="text-sm text-gray-500">2020 - 2024</p>
+                <div class="border-t border-gray-400 w-full"></div>
+                <p class="text-sm text-gray-700">GPA: 3.87</p>
+            </li>
+            <!-- Experience Section -->
+            <ul class="mb-2">
+                <h3 class="text-lg font-semibold mb-2">Experience</h3>
+                <li style="list-style-type: disc;">
+                    <div class="flex flex-col">
+                        <div>
+                            <div class="flex justify-between">
+                                <p class="text-gray-700 font-semibold">Assistant Lecturer</p>
+                                <p class="text-gray-700 text-right">October 2022 - Present</p>
+                            </div>
+                            <div class="border-t border-gray-400 w-full"></div>
+                        </div>
+                        <p class="text-gray-700">Telkom University</p>
+                        <div class="bg-white shadow-md rounded-lg p-6 mb-2">
+                            <ul class="list-none">
+                                <li class="text-gray-700 flex">
+                                    <span class="mr-2">-</span>
+                                    Assisted student comprehension of data structures (Linked Lists, Graphs, Queues) as Assistant Lecturer (Oct 2022 - Jan 2023).
+                                </li>
+                                <li class="text-gray-700 flex">
+                                    <span class="mr-2">-</span>
+                                    Currently as Assistant Lecturer for Software Verification and Validation (Feb 2024 - Present), ensuring quality standards adherence,
+and deepening understanding of verification methodologies.
+                                </li>
+                            </ul>
+                        </div>   
+                    </div>
+                </li>
+                <li style="list-style-type: disc;">
+                    <div class="flex flex-col">
+                        <div>
+                            <div class="flex justify-between">
+                                <p class="text-gray-700 font-semibold">Full Stack Developer</p>
+                                <p class="text-gray-700 text-right">June 2023 - August 2023</p>
+                            </div>
+                            <div class="border-t border-gray-400 w-full"></div>
+                        </div>
+                        <p class="text-gray-700">Krakatau International Port</p>
+                        <div class="bg-white shadow-md rounded-lg p-6 mb-2">
+                            <ul class="list-none">
+                                <li class="text-gray-700 flex">
+                                    <span class="mr-2">-</span>
+                                    Led WMS development as Full Stack Developer intern at Krakatau International Port (Jun 2023 - Aug 2023).
+                                </li>
+                                <li class="text-gray-700 flex">
+                                    <span class="mr-2">-</span>
+                                    Engineered robust system using Laravel and MySQL for SKU management, enhancing inventory efficiency.
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </li>
+                <li class="mb-2">
+                    <h3 class="text-lg font-semibold">Skill</h3>
+                    <p class="font-semibold">Hard Skill: </p><p class="mb-2">Test Automation, Software Testing, Black Box Testing, Programming Languages (Python, C++, Java, MySQL, PHP,
+                    HTML + CSS, Go), Data Analysis, Machine Learning, Web Development (HTML, CSS)</p>
+                    <p class="font-semibold">Soft Skill: </p><p class="mb-2">Logical Problem-Solving, Communication, Teamwork, Adaptability, Quality Assurance, Guidance and Teaching</p>
+                    <p class="font-semibold">Software Skill: </p><p class="mb-2">Katalon, TestOptimal, Word, Power Point, Excel</p>
+                </li>
+            </ul>
+        </ul>
+
+        <div class="mt-4 mb-4">
+            <div class="flex justify-center">
+                <a href="{{url_for('static', filename='pdf/CV_Ryan Oktaviandi Susilo Wibowo.pdf')}}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
+                    Download CV
+                </a>
+            </div>
+        </div>        
+
+        <div class="w-full h-1 rounded-lg shadow-lg my-2 overflow-hidden">
+            <div class="w-full h-full rounded-lg animate-gradient-yellow-to-orange"></div>
+        </div>
+        <!-- Portfolio (GitHub) Section -->
+        <footer class="bg-white shadow-md rounded-lg p-6">
+            <div class="container mx-auto">
+                <div class="mb-4 text-center">
+                    <a href="https://github.com/mobs3288" target="_blank" class="inline-block mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current text-gray-500 transition-colors duration-200 hover:text-black" viewBox="0 0 22 22">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </a>    
+                    
+                    <a href="https://www.linkedin.com/in/ryanosw/" target="_blank" class="inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 fill-current text-gray-500 transition-colors duration-200 hover:text-black" >
+                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                        </svg>
+                    </a>                         
+                </div>
+            </div>
+        </footer>        
+    </div>
+    
+    <!-- Right Sidebar -->
+    <div class="sidebar sidebar-right bg-white">
+        <ul class="p-4">
+            <div class="text-center mb-4">
+                <div class="container flex flex-col items-center">
+                    <div class="kuro text-8xl text-gray-800 font-serif mb-2">黒</div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+                <div class="flex">
+                    <div class="text-gray-600 font-japanese text-justify">Kuro is a REST API built using Flask that interacts with data from MyFigureCollection. 
+                        This API allows users to retrieve information about figures, entries, and collections available on the MyFigureCollection website. 
+                        It leverages web scraping techniques through open-source libraries to gather data dynamically from the MyFigureCollection website, 
+                        ensuring that users have access to the latest information.
+                    </div>
+                </div>
+            </div> 
+            <div class="text-gray-600 font-japanese mb-4 text-center">FEATURES</div>
+            <div class="flex">
+                <!-- Card 1 (30% width) -->
+                <div class="w-1/3 max-h-screen sticky top-0 overflow-y-auto">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 1 -->
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#item-data-retrieval">
+                                <h2 class="text-lg font-semibold mb-1">Item Data Retrieval</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Fetch detailed information about a specific figure using its ID.</p>
+                        </div> 
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#entry-data-retrieval">
+                                <h2 class="text-lg font-semibold mb-1">Entry Data Retrieval</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve entries along with pagination support.</p>
+                        </div> 
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#user-owned-collection">
+                                <h2 class="text-lg font-semibold mb-1">User-Owned Collection</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Access a user's owned figure collection with pagination.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#user-ordered-collection">
+                                <h2 class="text-lg font-semibold mb-1">User-Ordered Collection</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Fetch a user's ordered figure collection with pagination.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#user-wished-collection">
+                                <h2 class="text-lg font-semibold mb-1">User-Wished Collection</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve a user's wished figure collection with pagination.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#latest-figures">
+                                <h2 class="text-lg font-semibold mb-1">Latest Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Get information about the latest figures added to the collection with pagination.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#figures-currently-trending">
+                                <h2 class="text-lg font-semibold mb-1">Figures Currently Trending</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are currently trending.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#most-wished-figures">
+                                <h2 class="text-lg font-semibold mb-1">Most Wished Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are most wished by users.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#most-ordered-figures">
+                                <h2 class="text-lg font-semibold mb-1">Most Ordered Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are most ordered by users.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#most-owned-figures">
+                                <h2 class="text-lg font-semibold mb-1">Most Owned Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are most owned by users.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#most-highly-rated-figures">
+                                <h2 class="text-lg font-semibold mb-1">Most Highly Rated Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are most highly rated by users.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#most-viewed-figures">
+                                <h2 class="text-lg font-semibold mb-1">Most Viewed Figures</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures that are most viewed by users.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#figures-released-on-specific-date">
+                                <h2 class="text-lg font-semibold mb-1">Figures Released on a Specific Date</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve figures released on a specific date.</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6 mb-2 hover-effect">
+                            <a href="#user-profile-information">
+                                <h2 class="text-lg font-semibold mb-1">User Profile Information</h2>
+                            </a><p class="text-sm text-gray-600 mb-2">Retrieve profile information for a user.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <!-- Card 2 (70% width) -->
+                <div class="w-2/3">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="item-data-retrieval" class="text-lg font-semibold mb-1">Item Data Retrieval</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/anime/{id}/pictures
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/945912</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.copyData('ItemDataRetrieval')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('ItemDataRetrieval')" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="ItemDataRetrieval" data-api-url="/v1/items/945912">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>        
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="entry-data-retrieval" class="text-lg font-semibold mb-1">Entry Data Retrieval</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/entry/{entry_id}/{page_number}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/entry/7620/1</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('EntryDataRetrieval')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('EntryDataRetrieval', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="EntryDataRetrieval" data-api-url="/v1/entry/7620/1">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                        
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="user-owned-collection" class="text-lg font-semibold mb-1">User-Owned Collection</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/profile/{username}/collection/owned/{page_number}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/profile/LalaBunnyLand/collection/owned/1</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('UserOwnedCollection')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('UserOwnedCollection', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="UserOwnedCollection" data-api-url="/v1/profile/LalaBunnyLand/collection/owned/1">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                      
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="user-ordered-collection" class="text-lg font-semibold mb-1">User-Ordered Collection</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/profile/{username}/collection/owned/{page_number}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/profile/LalaBunnyLand/collection/ordered/1</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('UserOrderedCollection')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('UserOrderedCollection', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="UserOrderedCollection" data-api-url="/v1/profile/LalaBunnyLand/collection/ordered/1">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="latest-figures" class="text-lg font-semibold mb-1">Latest Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/latest/{page_number}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/latest/1</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('LatestFigures')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('LatestFigures', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="LatestFigures" data-api-url="/v1/items/latest/1">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="onfire" class="text-lg font-semibold mb-1">Figures Currently Trending</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/onfire
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/onfire</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('OnFire')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('OnFire', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="OnFire" data-api-url="/v1/items/onfire">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="most-wished" class="text-lg font-semibold mb-1">Most Wished Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/most_wished
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/most_wished</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('MostWished')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('MostWished', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="MostWished" data-api-url="/v1/items/most_wished">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                         
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="most-ordered" class="text-lg font-semibold mb-1">Most Ordered Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/most_ordered
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/most_ordered</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('MostOrdered')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('MostOrdered', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="MostOrdered" data-api-url="/v1/items/most_ordered">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="most-owned" class="text-lg font-semibold mb-1">Most Owned Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/most_owned
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/most_owned</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('MostOwned')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('MostOwned', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="MostOwned" data-api-url="/v1/items/most_owned">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                        
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="most-rated" class="text-lg font-semibold mb-1">Most Highly Rated Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/most_rated
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/most_rated</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('MostRated')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('MostRated', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="MostRated" data-api-url="/v1/items/most_rated">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                        
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="most-viewed" class="text-lg font-semibold mb-1">Most Viewed Figures</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/most_viewed
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/most_viewed</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('MostViewed')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('MostViewed', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="MostViewed" data-api-url="/v1/items/most_viewed">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                      
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="releases" class="text-lg font-semibold mb-1">Figures Released on a Specific Date</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/items/releases/{year}/{month}/{day}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/items/releases/2024/3/1</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('Releases')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('Releases', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="Releases" data-api-url="/v1/items/releases/2024/3/1">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Content for card 2 -->
+                        <h2 id="profiles" class="text-lg font-semibold mb-1">User Profile Information</h2>
+                        <button class="flex items-center mb-2" onclick="copyText(this)">
+                            <span type="get" class="http-verb get bg-green-500 text-white px-4 py-2 rounded-l-md cursor-pointer hover:bg-green-600">
+                                GET
+                            </span>
+                            <span class="bg-gray-500 text-white px-4 py-2 rounded-r-md">
+                                /v1/profile/{username}
+                            </span>
+                            <svg class="" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true" style="margin-right: -25px;">
+                                <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                            </svg>
+                        </button>
+                        <p class="mb-2">Example: /v1/profile/LalaBunnyLand</p>
+                        <div class="flex justify-end">
+                            <button onclick="ItemDataHandler.toggleAndCopyData('Profiles')" class="bg-green-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Copy JSON
+                            </button>
+                            <button onclick="ItemDataHandler.toggleItemData('Profiles', this)" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded-md">
+                                Show JSON
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-md shadow-md p-3 mt-2 relative hidden" id="Profiles" data-api-url="/v1/profile/LalaBunnyLand">
+                            <div class="spinner-container">
+                                <div class="spinner animate-spin rounded-full border-t-4 border-b-4 border-gray-900 h-12 w-12"></div>
+                            </div>                       
+                            <!-- JSON data will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div id="alertContainer" class="absolute top-4 right-4 z-9999"></div>
+
+    <!-- Main Content -->
+    <div class="flex justify-center items-center h-full">
+        <div id="toggleLeft" class="absolute left-0 ml-2 mt-2 p-2 bg-gray-800 text-white cursor-pointer transition duration-300 transform hover:scale-110">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        <div id="toggleRight" class="absolute right-0 mr-2 mt-2 p-2 bg-gray-800 text-white cursor-pointer transition duration-300 transform hover:scale-110">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="text-center">
+            <div class="container flex flex-col items-center">
+                <div class="kuro text-8xl text-gray-800 font-serif mb-2">黒</div>
+                <div class="kuro-text text-gray-600 font-japanese">KURO</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="footer-content">
+            <!-- Your footer content goes here -->
+            <p>&copy; 2024 Ryan Oktaviandi Susilo Wibowo. <span id="emailLink" style="cursor: pointer; text-decoration: underline;">ryanoktaviandi1010@gmail.com</span></p>
+        </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div id="arrowIcon" class="arrow-icon">
+        <i class="fas fa-chevron-up text-gray-600 text-xl"></i>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <div class="fixed top-0 justify-center inset-x-0 pt-3">
+        <div class="mb-4 text-center max-h-screen">
+            <a href="https://github.com/mobs3288/Kuro-rest" target="_blank" class="inline-block mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 fill-current text-gray-500 transition-colors duration-200 hover:text-black" viewBox="0 0 22 22">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+            </a>                      
+        </div>
+    </div>    
+
+    <!-- Script for toggling sidebars and footer -->
+    <script src="{{ url_for('static', filename='js/kuro.js') }}"></script>
+</body>
+</html>
