@@ -37,7 +37,7 @@ Kuro is a REST API built using Flask that interacts with data from [MyFigureColl
 ## Installation
 1. Clone the repository:
    ```
-   bash git clone https://github.com/your-username/Kuro.git
+   bash git clone https://github.com/mobs3288/Kuro-rest
 
 2. Navigate to the project directory:
    ```
